@@ -20,7 +20,7 @@ CREATE SEQUENCE IF NOT EXISTS order_num
 
 CREATE TABLE CUSTOMERS(
 	
-	user_id INTEGER PRIMARY KEY DEFAULT NEXTVAL('user_serial') ,
+	user_id INTEGER PRIMARY KEY DEFAULT NEXTVAL('user_serial'),
 	username VARCHAR(255),
 	email VARCHAR(255)
 );
@@ -40,3 +40,15 @@ CREATE TABLE ORDERS(
 	product_id INTEGER REFERENCES PRODUCTS(product_id) NOT NULL 
 	
 );
+
+-- Inser Dummy data into the customers table
+
+INSERT INTO CUSTOMERS (username,email) VALUES ('test', 'test.test@gmail.com');
+INSERT INTO CUSTOMERS (username,email) VALUES ('leo', 'leo24@gmail.com');
+INSERT INTO CUSTOMERS (username,email) VALUES ('sheldon', 'sheldon45@gmail.com');
+INSERT INTO CUSTOMERS (username,email) VALUES ('heinkin', 'heinkin56@gmail.com');
+INSERT INTO CUSTOMERS (username,email) VALUES ('sam', 'sam2@gmail.com');
+
+-- check for the inserted data
+
+SELECT * FROM CUSTOMERS
