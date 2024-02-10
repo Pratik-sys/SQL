@@ -40,8 +40,9 @@ CREATE TABLE ORDERS(
 	product_id INTEGER REFERENCES PRODUCTS(product_id) NOT NULL 
 	
 );
+--------------------------------------------------------------------------------------------------------------
 
--- Inser Dummy data into the customers table
+-- Insert Dummy data into the customers table
 
 INSERT INTO CUSTOMERS (username,email) VALUES ('test', 'test.test@gmail.com');
 INSERT INTO CUSTOMERS (username,email) VALUES ('leo', 'leo24@gmail.com');
@@ -51,4 +52,20 @@ INSERT INTO CUSTOMERS (username,email) VALUES ('sam', 'sam2@gmail.com');
 
 -- check for the inserted data
 
-SELECT * FROM CUSTOMERS
+SELECT * FROM CUSTOMERS;
+------------------------------------------------------------------------------------------------------------- 
+
+---- Insert Dummy data into the products table
+
+INSERT INTO PRODUCTS (PRODUCT_NAME,PRODUCT_PRICE) VALUES ('Charger Brick', 1000);
+INSERT INTO PRODUCTS (PRODUCT_NAME,PRODUCT_PRICE) VALUES ('Dell Laptop', 50000);
+INSERT INTO PRODUCTS (PRODUCT_NAME,PRODUCT_PRICE) VALUES ('Portronics Mouse', 600);
+INSERT INTO PRODUCTS (PRODUCT_NAME,PRODUCT_PRICE) VALUES ('Smart watch', 5000);
+INSERT INTO PRODUCTS (PRODUCT_NAME,PRODUCT_PRICE) VALUES ('Mi TV', 30000);
+INSERT INTO PRODUCTS (PRODUCT_NAME,PRODUCT_PRICE) VALUES ('LG Washin Machine', 40000);
+INSERT INTO PRODUCTS (PRODUCT_NAME,PRODUCT_PRICE) VALUES ('AC', 45000);
+
+-- check for the inserted data
+
+SELECT * FROM PRODUCTS;
+------------------------------------------------------------------------------------------------------------- 
