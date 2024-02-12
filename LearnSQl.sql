@@ -1,4 +1,5 @@
 -- Create Sequence 
+
 CREATE SEQUENCE IF NOT EXISTS user_serial
 	START WITH 1001
 	INCREMENT BY 5;
@@ -68,4 +69,16 @@ INSERT INTO PRODUCTS (product_name,product_price) VALUES ('AC', 45000);
 -- check for the inserted data
 
 SELECT * FROM PRODUCTS;
+------------------------------------------------------------------------------------------------------------- 
+
+---- Insert Dummy data into the products table
+
+INSERT INTO ORDERS (product_id, user_id) VALUES (2006,1001);
+INSERT INTO ORDERS (product_id, user_id) VALUES (2041,1021);
+INSERT INTO ORDERS (product_id, user_id) VALUES (2016,1011);
+INSERT INTO ORDERS (product_id, user_id) VALUES (2031,1006);
+
+-- check for the inserted data
+
+SELECT * FROM ORDERS;
 ------------------------------------------------------------------------------------------------------------- 
