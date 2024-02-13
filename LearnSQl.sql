@@ -22,15 +22,15 @@ CREATE SEQUENCE IF NOT EXISTS order_num
 CREATE TABLE CUSTOMERS(
 	
 	user_id INTEGER PRIMARY KEY DEFAULT NEXTVAL('user_serial'),
-	username VARCHAR(255),
-	email VARCHAR(255)
+	username VARCHAR(255) NOT NULL,
+	email VARCHAR(255) NOT NULL
 );
 
 CREATE TABLE PRODUCTS(
 
 	product_id INTEGER PRIMARY KEY DEFAULT NEXTVAL('product_serial'),
-	product_name VARCHAR(255),
-	product_price FLOAT
+	product_name VARCHAR(255) NOT NULL,
+	product_price FLOAT NOT NULL
 );
 
 CREATE TABLE ORDERS(
@@ -82,3 +82,4 @@ INSERT INTO ORDERS (product_id, user_id) VALUES (2031,1006);
 
 SELECT * FROM ORDERS;
 ------------------------------------------------------------------------------------------------------------- 
+
