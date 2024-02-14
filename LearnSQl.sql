@@ -83,3 +83,10 @@ INSERT INTO ORDERS (product_id, user_id) VALUES (2031,1006);
 SELECT * FROM ORDERS;
 ------------------------------------------------------------------------------------------------------------- 
 
+-- INNER JOIN selects records that have matching values in both tables.
+
+SELECT ORDERS.order_id, CUSTOMERS.username, CUSTOMERS.email, CUSTOMERS.user_id, ORDERS.order_date
+FROM CUSTOMERS
+INNER JOIN ORDERS ON ORDERS.user_id = CUSTOMERS.user_id;
+
+-------------------------------------------------------------------------------------------------------------
