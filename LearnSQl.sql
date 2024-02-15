@@ -90,3 +90,11 @@ FROM CUSTOMERS
 INNER JOIN ORDERS ON ORDERS.user_id = CUSTOMERS.user_id;
 
 -------------------------------------------------------------------------------------------------------------
+
+-- LEFT JOIN returns all records from the left table (table1), and the matching records from the right table (table2)
+
+SELECT ORDERS.order_id, CUSTOMERS.username,ORDERS.order_date
+FROM CUSTOMERS
+LEFT JOIN ORDERS ON ORDERS.user_id = CUSTOMERS.user_id;
+
+-------------------------------------------------------------------------------------------------------------
