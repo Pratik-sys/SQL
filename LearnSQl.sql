@@ -98,3 +98,11 @@ FROM CUSTOMERS
 LEFT JOIN ORDERS ON ORDERS.user_id = CUSTOMERS.user_id;
 
 -------------------------------------------------------------------------------------------------------------
+
+-- RIGHT JOIN returns all records from the right table (table2), and the matching records from the left table (table1)
+
+SELECT ORDERS.order_id, CUSTOMERS.username, CUSTOMERS.email
+FROM ORDERS
+RIGHT JOIN CUSTOMERS ON ORDERS.user_id = CUSTOMERS.user_id;
+
+-------------------------------------------------------------------------------------------------------------
