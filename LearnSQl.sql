@@ -106,3 +106,13 @@ FROM ORDERS
 RIGHT JOIN CUSTOMERS ON ORDERS.user_id = CUSTOMERS.user_id;
 
 -------------------------------------------------------------------------------------------------------------
+
+-- FULL OUTER JOIN - Statement joins two tables based on a common column
+
+SELECT CUSTOMERS.user_id, CUSTOMERS.username, customers.email, ORDERS.order_id
+FROM CUSTOMERS
+FULL OUTER JOIN ORDERS ON CUSTOMERS.user_id = ORDERS.user_id;
+
+-------------------------------------------------------------------------------------------------------------
+
+
