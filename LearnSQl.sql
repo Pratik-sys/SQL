@@ -115,4 +115,17 @@ FULL OUTER JOIN ORDERS ON CUSTOMERS.user_id = ORDERS.user_id;
 
 -------------------------------------------------------------------------------------------------------------
 
+-- GROUP By
 
+SELECT CUSTOMERS.user_id, CUSTOMERS.username, COUNT(ORDERS.order_id) FROM CUSTOMERS
+RIGHT JOIN ORDERS ON CUSTOMERS.user_id = ORDERS.order_id
+GROUP BY CUSTOMERS.user_id;
+
+-------------------------------------------------------------------------------------------------------------
+
+-- Using Multiple joins 
+
+SELECT CUSTOMERS.user_id, CUSTOMERS.username, ORDERS.order_id, ORDERS.order_number, PRODUCTS.product_name, PRODUCTS.product_price
+FROM ORDERS
+LEFT JOIN CUSTOMERS ON ORDERS.user_id = CUSTOMERS.user_id
+LEFT JOIN PRODUCTS ON ORDERS.product_id = PRODUCTS.product_id;
