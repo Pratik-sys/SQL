@@ -129,3 +129,20 @@ SELECT CUSTOMERS.user_id, CUSTOMERS.username, ORDERS.order_id, ORDERS.order_numb
 FROM ORDERS
 LEFT JOIN CUSTOMERS ON ORDERS.user_id = CUSTOMERS.user_id
 LEFT JOIN PRODUCTS ON ORDERS.product_id = PRODUCTS.product_id;
+
+-------------------------------------------------------------------------------------------------------------
+
+-- Create Procedure
+
+CREATE PROCEDURE TEST1()
+LANGUAGE plpgsql
+AS $$
+BEGIN
+	INSERT INTO PRODUCTS (product_name,product_price) VALUES ('Monitor', 45000);
+END;
+$$;
+
+-- to execute procedure	
+CALL TEST1()
+-------------------------------------------------------------------------------------------------------------
+
