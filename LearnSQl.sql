@@ -134,15 +134,20 @@ LEFT JOIN PRODUCTS ON ORDERS.product_id = PRODUCTS.product_id;
 
 -- Create Procedure
 
-CREATE PROCEDURE TEST1()
+CREATE OR REPLACE PROCEDURE TEST1(
+pname VARCHAR,
+price FLOAT
+
+)
+
 LANGUAGE plpgsql
 AS $$
 BEGIN
-	INSERT INTO PRODUCTS (product_name,product_price) VALUES ('Monitor', 45000);
+	INSERT INTO PRODUCTS (product_name,product_price) VALUES (pname, price);
 END;
 $$;
 
 -- to execute procedure	
-CALL TEST1()
+CALL TEST1('TWS', 2000)
 -------------------------------------------------------------------------------------------------------------
 
