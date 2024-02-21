@@ -148,6 +148,25 @@ END;
 $$;
 
 -- to execute procedure	
-CALL TEST1('TWS', 2000)
+CALL TEST1('TWS', 2000);
 -------------------------------------------------------------------------------------------------------------
+
+-- MISC Commands
+
+
+-- TRUNCATE command wipes the table clean 
+
+TRUNCATE PRODUCTS;
+TRUNCATE CUSTOMERS;
+TRUNCATE ORDERS;
+
+-- DROP command to delete the tables from database
+ 
+DROP TABLE CUSTOMERS;
+DROP TABLE PRODUCTS;
+DROP TABLE ORDERS;
+
+-- ALTER comand helps to add modify the new table or exiting table and change datatypes for anycolumns if needed.
+ALTER TABLE PRODUCTS 
+ADD COLUMN available BOOLEAN; 
 
